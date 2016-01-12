@@ -16,7 +16,7 @@ namespace Labb1WCF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FirstLabbForm());
+            Application.Run(new Labb1_4WinForm());
         }
     }
 }
