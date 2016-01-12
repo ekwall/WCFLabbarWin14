@@ -37,7 +37,7 @@ namespace WcfService1
                     return dayOfWeek + " gonna be smoggy! Smookiiiiiiinnnn";
                     break;
                 case 4:
-                    return dayOfWeek + " ooh today is bad weather! Don't get out of bed!";
+                    return dayOfWeek + " ooh today is bad bad weather! Don't get out of bed!";
                     break;
                 default:
                     return "No wheater for you";
