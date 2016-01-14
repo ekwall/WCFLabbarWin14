@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -29,14 +30,12 @@ namespace WcfService5
         {
             var dateDict = new Dictionary<DateTime, List<string>>();
 
-            string text = System.IO.File.ReadAllText( @"~/WcfService5/Namnsdagar.txt" );
+            string text = System.IO.File.ReadAllText(@"C:\GitProjects\WCF\labbar\WCFLabbarWin14\Labb1WCF1\WcfService5\Namnsdagar.txt");
+            
             string numberPattern = @"[0-9]{1,2}[ ]{1}[0-9]{1,2}[ ]{1}";
             string separateCarrigeReturn = @"[\n\r]+";
-            var myregex = new Regex("1-9,0-9,␣,1-9,0-2,␣");
-
-            string[] splitAtDates = Regex.Split(text, separateCarrigeReturn);
-
             
+            string[] splitAtDates = Regex.Split(text, separateCarrigeReturn);
 
             var selectedNames = (
 
@@ -57,14 +56,12 @@ namespace WcfService5
 
                 dateDict.Add(theDate, splitNames);
 
-              
-
             }
 
             var result = (
                 from d in dateDict
-                from e in d.Value
-                where Regex.IsMatch(e.ToLower(), @"\b" + name.ToLower() + @"\b")
+                from v in d.Value
+                where Regex.IsMatch(v.ToLower(), @"\b" + name.ToLower() + @"\b")
                     select d.Key
                     ).FirstOrDefault();
 
