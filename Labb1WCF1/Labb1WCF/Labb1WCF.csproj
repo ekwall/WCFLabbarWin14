@@ -138,6 +138,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\Labb1_6_2_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -213,6 +218,16 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Labb1_6_1Service\Labb1_6_1Service.wsdl" />
+    <None Include="Service References\Labb1_6_2_Service\Labb1WCF.Labb1_6_2_Service.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Labb1_6_2_Service\Labb1WCF.Labb1_6_2_Service.GetCountriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Labb1_6_2_Service\Labb1WCF.Labb1_6_2_Service.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Labb1_6_2_Service\Labb6_2.wsdl" />
     <None Include="Service References\ServiceReference1\Labb1_Service.wsdl" />
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +243,7 @@
     <WCFMetadataStorage Include="Service References\Labb1_5Reff_2_service\" />
     <WCFMetadataStorage Include="Service References\Labb1_5ServiceGetDateByName\" />
     <WCFMetadataStorage Include="Service References\Labb1_6_1Service\" />
+    <WCFMetadataStorage Include="Service References\Labb1_6_2_Service\" />
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
   <ItemGroup>
@@ -343,6 +359,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Labb1_6_1Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Labb1_6_2_Service\Labb6_2.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Labb1_6_2_Service\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Labb1_6_2_Service\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Labb1_6_2_Service\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -18,6 +18,13 @@ namespace WcfService6_2
     public class Labb6_2 : System.Web.Services.WebService
     {
 
+        public List<string> contriesList;
+
+        public Labb6_2()
+        {
+             contriesList = new List<string>();   
+        }
+        
         [WebMethod]
         public string HelloWorld()
         {
@@ -27,13 +34,26 @@ namespace WcfService6_2
         [WebMethod]
         public List<string> GetCountries(string search)
         {
-            XmlReader reader = new XmlTextReader(@"C:\GitProjects\WCF\labbar\WCFLabbarWin14\Labb1WCF1\WcfService6_2\countries.xml");
+            XmlTextReader reader = new XmlTextReader(@"C:\GitProjects\WCF\labbar\WCFLabbarWin14\Labb1WCF1\WcfService6_2\countries.xml");
 
             while (reader.Read())
             {
-                
+                if (reader.NodeType == XmlNodeType.Text)
+                {
+                    contriesList.Add(reader.Value);
+                }
             }
-            return null;
+
+            var test = contriesList.FindAll(x => x.Contains(search));
+
+            var test2 = contriesList.OrderByDescending(x => x).ToList();
+
+            var result = (
+                from c in contriesList
+                where c.Contains(search)
+                select c).ToList();
+
+            return test2;
         } 
     }
 }
