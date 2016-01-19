@@ -14,11 +14,11 @@ namespace ECUtbildning.SelfService
     public interface ICalculateBMI
     {
         [OperationContract]
-        double CalcBMI(int weight, int height);
+        double CalcBMI(double weight, double height);
     }
     public class CalculateBMI : ICalculateBMI
     {
-        public double CalcBMI(int weight, int height)
+        public double CalcBMI(double weight, double height)
         {
             return (weight / (height * height));
            

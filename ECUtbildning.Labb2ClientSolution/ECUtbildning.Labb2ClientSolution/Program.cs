@@ -12,9 +12,9 @@ namespace ECUtbildning.Labb2ClientSolution
         static void Main(string[] args)
         {
             Console.WriteLine("Enter weight");
-            int weight = int.Parse(Console.ReadLine());
+            double weight = double.Parse(Console.ReadLine());
             Console.WriteLine("Enter your length");
-            int length = int.Parse(Console.ReadLine());
+            double length = double.Parse(Console.ReadLine());
 
             CalculateBMIClient client = new CalculateBMIClient();
             double result = client.CalcBMI(weight, length);

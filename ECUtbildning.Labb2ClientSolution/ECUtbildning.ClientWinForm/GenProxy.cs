@@ -16,10 +16,10 @@ public interface ICalculateBMI
 {
     
     [System.ServiceModel.OperationContractAttribute(Action="ECUtbildning.SelfService/ICalculateBMI/CalcBMI", ReplyAction="ECUtbildning.SelfService/ICalculateBMI/CalcBMIResponse")]
-    double CalcBMI(int weight, int height);
+    double CalcBMI(double weight, double height);
     
     [System.ServiceModel.OperationContractAttribute(Action="ECUtbildning.SelfService/ICalculateBMI/CalcBMI", ReplyAction="ECUtbildning.SelfService/ICalculateBMI/CalcBMIResponse")]
-    System.Threading.Tasks.Task<double> CalcBMIAsync(int weight, int height);
+    System.Threading.Tasks.Task<double> CalcBMIAsync(double weight, double height);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -56,12 +56,12 @@ public partial class CalculateBMIClient : System.ServiceModel.ClientBase<ICalcul
     {
     }
     
-    public double CalcBMI(int weight, int height)
+    public double CalcBMI(double weight, double height)
     {
         return base.Channel.CalcBMI(weight, height);
     }
     
-    public System.Threading.Tasks.Task<double> CalcBMIAsync(int weight, int height)
+    public System.Threading.Tasks.Task<double> CalcBMIAsync(double weight, double height)
     {
         return base.Channel.CalcBMIAsync(weight, height);
     }
